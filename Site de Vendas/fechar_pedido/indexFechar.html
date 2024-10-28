@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MythicShop</title>
+    <link rel="stylesheet" href="/fechar_pedido/styleFechar.css">
+</head>
+<body>
+    <div class="container-cabecalho">
+        <div class="logo">
+            <a href="/main/index.html"><img src="/imagens/king.jpg" alt="Logo"></a>
+        </div>
+        <div class="barra-pesquisa">
+            <input type="text" placeholder="Buscar produtos...">
+            <button type="submit">
+                <img src="/imagens/lupa.png">
+            </button>
+        </div>
+        <nav class="navegacao-principal">
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn"><img src="/imagens/perfil.png"></a>
+                    <div class="dropdown-content">
+                        <a href="/meu perfil/index.html">Minha Conta</a>
+                        <a href="/carrinho/index.html">Carrinho</a>
+                        <a href="/cadastro/cadastro.html">Cadastrar</a>
+                        <a href="/login/Login.html">Entrar</a>
+                    </div>
+                </li>
+                <li><a href="#" class="dropbtn"><img src="/imagens/carrinho.png"></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container-cabecalho2">
+
+    </div>
+
+    <div class="container-categorias">
+        <nav class="categorias">
+            <ul>
+                <li><a href="/categorias/hardware/index.html">Hardware</a></li>
+                <li><a href="/categorias/perifericos/index.html">Periféricos</a></li>
+                <li><a href="/categorias/computadores/index.html">Computadores</a></li>
+                <li><a href="/categorias/games/index.html">Games</a></li>
+                <li><a href="/categorias/conectividade/index.html">Conectividade</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container-lista">
+        <ol class="lista-itens">
+            <form action="/main/index.html">
+            <h2>FECHAR PEDIDO</h2>
+            <li class="item">
+                <span class="titulo" onclick="toggleExpand(event, this)">ENDEREÇO PRINCIPAL DE ENTREGA</span>
+                <div class="expansao">
+                    <label for="input1">Nome</label>
+                    <input type="text" id="input1" name="campo1" required>
+                    <label for="input2">Sobrenome</label>
+                    <input type="text" id="input2" name="campo2" required>
+                    <label for="input3">Endereço</label>
+                    <input type="text" id="input3" name="campo3" required>
+                    <label for="input4">Número</label>
+                    <input type="text" id="input4" name="campo4" required>
+                    <label for="input5">Complemento</label>
+                    <input type="text" id="input5" name="campo5" required>
+                    <label for="input6">Bairro</label>
+                    <input type="text" id="input6" name="campo6" required>
+                    <label for="input7">Cidade</label>
+                    <input type="text" id="input7" name="campo7" required>
+                    <label for="input8">Estado</label>
+                    <input type="text" id="input8" name="campo8" required>
+                    <label for="input9">CEP</label>
+                    <input type="text" id="input9" name="campo9" required>
+                </div>
+            </li>
+            <li class="item">
+                <span class="titulo" onclick="toggleExpand(event, this)">OUTRO ENDEREÇO DE ENTREGA</span>
+                <div class="expansao">
+                    <label for="input10">Nome</label>
+                    <input type="text" id="input10" name="campo10" required>
+                    <label for="input11">Sobrenome</label>
+                    <input type="text" id="input11" name="campo11" required>
+                    <label for="input12">Endereço</label>
+                    <input type="text" id="input12" name="campo12" required>
+                    <label for="input13">Número</label>
+                    <input type="text" id="input13" name="campo13" required>
+                    <label for="input14">Complemento</label>
+                    <input type="text" id="input14" name="campo14" required>
+                    <label for="input15">Bairro</label>
+                    <input type="text" id="input15" name="campo15" required>
+                    <label for="input16">Cidade</label>
+                    <input type="text" id="input16" name="campo16" required>
+                    <label for="input17">Estado</label>
+                    <input type="text" id="input17" name="campo17" required>
+                    <label for="input18">CEP</label>
+                    <input type="text" id="input18" name="campo18" required> 
+                </div>
+            </li>
+            <li class="item">
+                <span class="titulo" onclick="toggleExpand(event, this)">ESCOLHA DE FRETE</span>
+                    <div class="expansao">
+                        <div class="frete-opcoes">
+                            <div class="opcao-frete">
+                                <button class="bolinha" onclick="selecionarFrete('SEDEX', 76.47)"></button>
+                                <span class="texto-frete">SEDEX</span>
+                                <span class="preco-frete">R$76,47</span>
+                            </div>
+                            <div class="opcao-frete">
+                                <button class="bolinha" onclick="selecionarFrete('PAC', 35.00)"></button>
+                                <span class="texto-frete">PAC</span>
+                                <span class="preco-frete">R$35,00</span>
+                            </div>
+                        </div>
+                    </div>
+            </li>
+            <li class="item">
+                <span class="titulo" onclick="toggleExpand(event, this)">INFORMAÇÃO DE PAGAMENTO</span>
+                    <div class="expansao">
+                        <div class="escolha-frete">
+                            <button class="btn-pagamento"></button>
+                            <span class="texto-frete">BOLETO BANCÁRIO</span>
+                        </div>
+                        <div class="escolha-frete">
+                            <button class="btn-pagamento"></button>
+                            <span class="texto-frete">CARTÃO DE CRÉDITO</span>
+                        </div>
+                        <div class="escolha-frete">
+                            <button class="btn-pagamento"></button>
+                            <span class="texto-frete">PIX QR Code</span>
+                        </div>
+                    </div>
+            </li>
+            <li class="item">
+                <span class="titulo" onclick="toggleExpand(event, this)">CONFIRMAR PEDIDO</span>
+                <div class="expansao">
+                    <table class="data-table linearize-table checkout-review-table" id="checkout-review-table">
+                        <thead>
+                            <tr class="first last">
+                                <th rowspan="1">Produto</th>
+                                <th colspan="1" class="a-center">Preço</th>
+                                <th rowspan="1" class="a-center">Qtd</th>
+                                <th colspan="1" class="a-center">Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="first last odd">
+                                <td><h3 class="product-name">Memória RAM DDR4 8gb</h3></td>
+                                <td class="a-right" data-rwd-label="Preço">
+                                    <span class="cart-price">
+                                        <span class="price">R$25,99</span>
+                                    </span>
+                                </td>
+                                <td class="a-center" data-rwd-label="Qtd">1</td>
+                                <td class="a-right last" data-rwd-label="Subtotal">
+                                    <span class="cart-price">
+                                        <span class="price">R$25,99</span>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr class="first">
+                                <td class="a-right" colspan="3">Subtotal</td>
+                                <td class="a-right last"><span id="subtotal" class="price">R$25,99</span></td>
+                            </tr>
+                            <tr>
+                                <td class="a-right" colspan="3">Embalagem e Entrega (<span id="nome-frete">SEDEX</span>)</td>
+                                <td class="a-right last"><span id="preco-frete" class="price">R$76,47</span></td>
+                            </tr>
+                            <tr class="last">
+                                <td class="a-right" colspan="3"><strong>Valor Total</strong></td>
+                                <td class="a-right last"><strong><span id="valor-total" class="price">R$102,46</span></strong></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    
+                    <div class="confirmar-pedido-container">
+                        <button type="submit" class="confirmar-pedido-btn">CONFIRMAR PEDIDO</button>
+                    </div>
+                    
+                </div>
+            </li>
+            </form>
+        </ol>
+    </div>
+    
+
+    <div class="rodape">
+        <div class="rodape-secao">
+            <h3>A Loja</h3>
+            <ul>
+                <li><a href="/links_rodapé/quem_somos/index.html">Quem somos</a></li>
+                <li><a href="/links_rodapé/historia/index.html">História</a></li>
+            </ul>
+        </div>
+        <div class="rodape-secao">
+            <h3>Política de Privacidade</h3>
+            <ul>
+                <li><a href="/links_rodapé/privacidade_e_segurança/index.html">Privacidade e segurança</a></li>
+                <li><a href="/links_rodapé/trocas_e_devolucoes/index.html">Trocas e devoluções</a></li>
+                <li><a href="/links_rodapé/prazo_e_entrega/index.html">Prazo e Entrega</a></li>
+                <li><a href="/links_rodapé/ainda_não_recebi_minha_compra/index.html">Ainda não recebi minha compra</a></li>
+                <li><a href="/links_rodapé/formas_de_pagamento/index.html">Formas de pagamento</a></li>
+            </ul>
+        </div>
+        <div class="rodape-secao">
+            <h3>Atendimento</h3>
+            <ul>
+                <li><a href="https://wa.me/8185960347">Atendimento via Whatsapp</a></li>
+                <li><a href="/links_rodapé/atendimento_por_e-mail/index.html">Atendimento por E-mail</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <footer class="direitos">
+        <p>&copy; 2024 KingsServant. Todos os direitos reservados.</p>
+    </footer>
+    <script src="/fechar_pedido/scriptFechar.js"></script>
+</body>
+</html>
+</body>
+</html>

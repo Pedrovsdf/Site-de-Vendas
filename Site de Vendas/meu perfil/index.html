@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container-cabecalho">
+        <div class="logo">
+            <a href="/main/index.html"><img src="/imagens/king.jpg" alt="Logo"></a>
+        </div>
+        <div class="barra-pesquisa">
+            <input type="text" placeholder="Buscar produtos...">
+            <button type="submit">
+                <img src="/imagens/lupa.png">
+            </button>
+        </div>
+        <nav class="navegacao-principal">
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn"><img src="/imagens/perfil.png"></a>
+                    <div class="dropdown-content">
+                        <a href="/meu perfil/index.html">Minha Conta</a>
+                        <a href="/carrinho/index.html">Carrinho</a>
+                        <a href="/cadastro/cadastro.html">Cadastrar</a>
+                        <a href="/login/Login.html">Entrar</a>
+                    </div>
+                </li>
+                <li><a href="#" class="dropbtn"><img src="/imagens/carrinho.png"></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container-cabecalho2">
+
+    </div>
+
+    <div class="container-categorias">
+        <nav class="categorias">
+            <ul>
+                <li><a href="/categorias/hardware/index.html">Hardware</a></li>
+                <li><a href="/categorias/perifericos/index.html">Periféricos</a></li>
+                <li><a href="/categorias/computadores/index.html">Computadores</a></li>
+                <li><a href="/categorias/games/index.html">Games</a></li>
+                <li><a href="/categorias/conectividade/index.html">Conectividade</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Conteúdo do Meu Perfil -->
+    <div class="container">
+        <h1>Meu Perfil</h1>
+
+        <!-- Informações do Usuário -->
+        <div class="perfil-info">
+            <div class="foto-perfil">
+                <img src="/imagens/perfil.jpg" alt="Foto de Perfil"> 
+                <h2>João da Silva</h2> <!-- Nome do usuário -->
+                <p>Email: joao.silva@email.com</p> <!-- Email do usuário -->
+                <p>Telefone: (11) 91234-5678</p><!-- Substitua pelo caminho da imagem do usuário -->
+                <button id="edit-user-info">Editar Nome </button> 
+            </div>
+        </div>
+
+        <div class="enderecos">
+            <h3>Meus Endereços</h3>
+        <ul class="enderecos">
+            <li>Rua Exemplo, 123 - São Paulo, SP 
+                <button class="butao2" onclick="removeAddress(this)">Remover</button></li>
+            <li>Avenida Teste, 456 - Rio de Janeiro, RJ 
+                <button class="butao2" onclick="removeAddress(this)">Remover</button></li>
+        </ul>
+        <!-- Botão para adicionar novo endereço -->
+        <button id="add-address-button">Adicionar Novo Endereço</button>
+        </div>
+
+        <div class="seguranca">
+            <h3>Acesso à Segurança</h3>
+        <!-- Botão para mudar senha -->
+        <button id="change-password-button">Mudar Senha e Email</button>
+        
+        </div>
+
+        <div class="historico-pedidos">
+            <h3>Histórico de Pedidos</h3>
+        <table class="historico-pedidos">
+            <thead>
+                <tr>
+                    <th>ID do Pedido</th>
+                    <th>Produto</th> 
+                    <th>Data</th>
+                    <th>Status</th>
+                    <th>Total</th>
+                    <th>Ações</th> 
+                </tr>
+            </thead>
+            <tbody id="historico-pedidos-body">
+                <!-- Exemplo de pedidos -->
+                <!-- Os pedidos podem ser gerados dinamicamente via JavaScript -->
+                <!-- Exemplo de pedido estático -->
+                <tr>
+                    <td>#12345</td>
+                    <td>Produto A</td> 
+                    <td>01/01/2024</td>
+                    <td>Entregue</td>
+                    <td>R$ 150.00</td>
+                    <td><button class="butao3" onclick="returnProduct(12345)">Devolver Produto</button> | 
+                        <button onclick="reorderProduct(12345)">Comprar Novamente</button></td> 
+                </tr>
+            </tbody>
+        </table>
+        </div>
+
+        <div class="pagamentos">
+            <h3>Seus Pagamentos</h3>
+        <!-- Botão para adicionar forma de pagamento -->
+        <button id="add-payment-button">Adicionar Forma de Pagamento</button>
+        </div>
+
+    </div>
+    <!-- Rodapé -->
+  <!-- Rodapé -->
+  <div class="rodape">
+    <div class="rodape-secao">
+        <h3>A Loja</h3>
+        <ul>
+            <li><a href="/links_rodapé/quem_somos/index.html">Quem somos</a></li>
+            <li><a href="/links_rodapé/historia/index.html">História</a></li>
+        </ul>
+    </div>
+    <div class="rodape-secao">
+        <h3>Política de Privacidade</h3>
+        <ul>
+            <li><a href="/links_rodapé/privacidade_e_segurança/index.html">Privacidade e segurança</a></li>
+            <li><a href="/links_rodapé/trocas_e_devolucoes/index.html">Trocas e devoluções</a></li>
+            <li><a href="/links_rodapé/prazo_e_entrega/index.html">Prazo e Entrega</a></li>
+            <li><a href="/links_rodapé/ainda_não_recebi_minha_compra/index.html">Ainda não recebi minha compra</a></li>
+            <li><a href="/links_rodapé/formas_de_pagamento/index.html">Formas de pagamento</a></li>
+        </ul>
+    </div>
+    <div class="rodape-secao">
+        <h3>Atendimento</h3>
+        <ul>
+            <li><a href="https://wa.me/8185960347">Atendimento via Whatsapp</a></li>
+            <li><a href="/links_rodapé/atendimento_por_e-mail/index.html">Atendimento por E-mail</a></li>
+        </ul>
+    </div>
+</div>
+<script src="/script.js"></script>
+<footer class="direitos">
+    <p>&copy; 2024 KingsServant. Todos os direitos reservados.</p>
+</footer> 
+</body>
+</html>
+

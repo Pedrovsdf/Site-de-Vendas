@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #e6e6e6;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container-cabecalho {
+    display: flex;
+    align-items: center; /* Alinha itens verticalmente ao centro */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    background-color: #272525;
+    width: 95%; /* Define a largura do contêiner */
+    max-width: 1400px; /* Define uma largura máxima para o contêiner */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    height: 90px; /* Define uma altura fixa para o contêiner */
+    position: relative; /* Permite posicionamento absoluto de elementos filhos */
+    z-index: 2;
+}
+
+.container-cabecalho2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background-color: #272525;
+    z-index: 1;
+}
+
+.container-categorias {
+    background-color: #fa8f0d;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.categorias ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.categorias li {
+    display: inline;
+}
+
+.categorias a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.categorias a:hover {
+    background-color: #272525;
+    border-radius: 5px;
+}
+
+.barra-pesquisa {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    background-color: #f8f8f8;
+    border-radius: 25px;
+    padding: 5px; /* Padding interno geral */
+    max-width: 100%; /* Garante que a barra de pesquisa não ultrapasse o contêiner */
+    width: 40%; /* Ajusta a largura conforme necessário */
+    box-sizing: border-box; /* Inclui o padding e borda no cálculo da largura */
+    margin: 0 auto; /* Centraliza a barra de pesquisa */
+}
+
+.barra-pesquisa input {
+    border: none;
+    outline: none;
+    background: none;
+    padding: 8px;
+    flex: 1;
+    font-size: 16px;
+    border-radius: 25px;
+}
+
+.barra-pesquisa button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.barra-pesquisa img {
+    width: 20px;
+    height: 20px;
+}
+
+
+.logo {
+    display: flex;
+    max-width: 100%; /* Garante que a logo não ultrapasse a largura do contêiner */
+}
+
+.logo img {
+    max-height: 100%; /* Garante que a imagem não ultrapasse a altura do contêiner */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+    height: auto; /* Mantém a proporção da altura em relação à largura */
+    width: auto; /* Mantém a proporção da largura em relação à altura */
+}
+
+.navegacao-principal {
+    display: flex; /* Usa flexbox para layout */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    margin-left: auto; /* Alinha a navegação à direita */
+}
+
+.navegacao-principal ul {
+    display: flex; /* Alinha os itens horizontalmente */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navegacao-principal li {
+    display: flex; /* Alinha os itens do menu horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente */
+    position: relative; /* Necessário para posicionar o dropdown corretamente */
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+    line-height: 24px; /* Ajusta a altura da linha para alinhamento vertical */
+    border: none; /* Remove a borda padrão */
+    background: none; /* Remove o fundo padrão */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Posiciona o dropdown abaixo do botão */
+    left: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: white;
+}
+
+/* Estilo para as informações do usuário na tela de perfil */
+
+.container{
+    background-color: #fffafa;
+    height: 900px;
+    margin: 10px 10%;
+    padding: 3%;
+    border-radius: 20px;
+}
+
+
+.perfil-info {
+     display:flex; 
+     align-items:center; /* Alinha verticalmente a foto e as informações */
+     margin-bottom:20px; /* Espaço abaixo das informações do usuário */
+}
+
+.foto-perfil img {
+     width:100px; /* Tamanho da imagem do perfil */
+     height:auto; /* Mantém a proporção da imagem */
+     border-radius:50%; /* Faz com que a imagem seja redonda */
+}
+
+.container ul li{
+    margin-bottom: 15px;
+}
+.butao2{
+    margin-left: 30px ;
+}
+
+.butao3{
+    margin-left: 20%;
+}
+/* Estilos da tabela do histórico de pedidos */
+.historico-pedidos {
+     width :100%; /* Largura total da tabela */
+     border-collapse :collapse ; /* Remove espaços entre as bordas das células */
+}
+
+.historico-pedidos th,
+.historico-pedidos td {
+     border :1px solid #ddd ; /* Borda leve nas células */
+     padding :8px ; /* Preenchimento interno das células */
+}
+
+.historico-pedidos th {
+     background-color :#f2f2f2 ; /* Cor de fundo dos cabeçalhos da tabela */
+}
+
+/* Estilos dos botões */
+button {
+     padding :10px 15px ; /* Preenchimento dos botões */
+     background-color :#fa8f0d ; /* Cor laranja dos botões */
+     color:white ; /* Cor do texto dos botões */
+     border:none ; /* Remove bordas padrão dos botões */
+     border-radius :5px ; /* Bordas arredondadas nos botões */
+     cursor:pointer; /* Cursor em forma de mão ao passar sobre os botões */
+}
+
+button:hover {
+     background-color:#e68a00 ; /* Cor mais escura ao passar o mouse nos botões */
+}
+
+/* Estilos gerais para o rodapé */
+
+.rodape {
+     background-color:#e6e6e6 ; 
+     color:#fa8f0d ; 
+     padding :20px ; 
+     display:flex ; 
+     flex-wrap:wrap ; 
+     justify-content :space-between ; 
+     gap :20px ; 
+     width :90% ; 
+     max-width :1400px ; 
+     margin :20px auto ; 
+}
+
+/* Estilos das seções do rodapé */
+
+.rodape-secao h3 {
+     margin-top: 0; /* Remove a margem superior do título da seção do rodapé*/
+     margin-bottom: 10px; /* Espaçamento abaixo do título da seção do rodapé*/
+ }
+
+.rodape-secao ul {
+     list-style:none ; 
+     padding :0 ; 
+     margin :0 ; 
+ }
+
+.rodape-secao li { 
+     margin-bottom :5px ; 
+ }
+
+.rodape-secao a { 
+     color:#333 ; 
+     text-decoration:none ; 
+ }
+
+.rodape-secao a:hover { 
+     text-decoration :underline ; 
+ }
+
+/* Estilos dos Direitos Autorais */
+
+.direitos { 
+     background-color:#333 ; 
+     color:#fff ; 
+     text-align:center ; 
+     padding :20px 0 ; 
+     width :100% ; 
+     position :relative ; 
+}

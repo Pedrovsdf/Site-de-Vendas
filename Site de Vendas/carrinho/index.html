@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto</title>
+    <link rel="stylesheet" href="/carrinho/styles.css">
+    <script src="/"></script>
+</head>
+<body>
+    <div class="container-cabecalho">
+        <div class="logo">
+            <a href="/main/index.html"><img src="/imagens/king.jpg" alt="Logo"></a>
+        </div>
+        <div class="barra-pesquisa">
+            <input type="text" placeholder="Buscar produtos...">
+            <button type="submit">
+                <img src="/imagens/lupa.png">
+            </button>
+        </div>
+        <nav class="navegacao-principal">
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn"><img src="/imagens/perfil.png"></a>
+                    <div class="dropdown-content">
+                        <a href="/meu perfil/index.html">Minha Conta</a>
+                        <a href="/carrinho/index.html">Carrinho</a>
+                        <a href="/cadastro/cadastro.html">Cadastrar</a>
+                        <a href="/login/Login.html">Entrar</a>
+                    </div>
+                </li>
+                <li><a href="#" class="dropbtn"><img src="/imagens/carrinho.png"></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container-cabecalho2">
+
+    </div>
+
+    <div class="container-categorias">
+        <nav class="categorias">
+            <ul>
+                <li><a href="/categorias/hardware/index.html">Hardware</a></li>
+                <li><a href="/categorias/perifericos/index.html">Periféricos</a></li>
+                <li><a href="/categorias/computadores/index.html">Computadores</a></li>
+                <li><a href="/categorias/games/index.html">Games</a></li>
+                <li><a href="/categorias/conectividade/index.html">Conectividade</a></li>
+            </ul>
+        </nav>
+    </div>
+<!-- teu codigo -->
+
+    <!-- Conteúdo do Carrinho -->
+    <div class="container" style="margin-top: 20px;"> <!-- Adicionando margem superior aqui -->
+        <h1>Carrinho de Compras</h1>
+        <table id="cart" class="cart-table">
+            <thead>
+                <tr>
+                    <th>Imagem</th> <!-- Nova coluna para imagem -->
+                    <th>Produto</th>
+                    <th>Preço</th>
+                    <th>Quantidade</th>
+                    <th>Subtotal</th>
+                    <th></th> <!-- Coluna vazia para o botão de remover -->
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <!-- Os itens do carrinho serão inseridos aqui pelo JavaScript -->
+            </tbody>
+        </table>
+
+        <!-- Botão para continuar adicionando produtos -->
+        <a href="/main/index.html"><button id="add-product-button">Adicionar Mais Produtos</button></a>
+
+        <!-- Formulário para CEP e forma de pagamento -->
+        <div class="payment-info">
+            <h2>Informações de Pagamento</h2>
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" placeholder="Digite seu CEP">
+
+            <h3>Forma de Pagamento:</h3>
+            <select id="payment-method">
+                <option value="">Selecione...</option>
+                <option value="pix">Pix</option>
+                <option value="cartao">Cartão de Crédito</option>
+                <option value="boleto">Boleto</option>
+            </select>
+
+            <!-- Exibir total -->
+            <div class="total">
+                <h2>Total: R$ <span id="total-price">0.00</span></h2>
+            </div>
+
+            <!-- Botão para finalizar compra -->
+            <a href="/fechar_pedido/indexFechar.html"><button id="checkout-button">Finalizar Compra</button></a>
+        </div>
+
+    </div>
+<!-- teu codigo -->
+    <div class="rodape">
+        <div class="rodape-secao">
+            <h3>A Loja</h3>
+            <ul>
+                <li><a href="/links_rodapé/quem_somos/index.html">Quem somos</a></li>
+                <li><a href="/links_rodapé/historia/index.html">História</a></li>
+            </ul>
+        </div>
+        <div class="rodape-secao">
+            <h3>Política de Privacidade</h3>
+            <ul>
+                <li><a href="/links_rodapé/privacidade_e_segurança/index.html">Privacidade e segurança</a></li>
+                <li><a href="/links_rodapé/trocas_e_devolucoes/index.html">Trocas e devoluções</a></li>
+                <li><a href="/links_rodapé/prazo_e_entrega/index.html">Prazo e Entrega</a></li>
+                <li><a href="/links_rodapé/ainda_não_recebi_minha_compra/index.html">Ainda não recebi minha compra</a></li>
+                <li><a href="/links_rodapé/formas_de_pagamento/index.html">Formas de pagamento</a></li>
+            </ul>
+        </div>
+        <div class="rodape-secao">
+            <h3>Atendimento</h3>
+            <ul>
+                <li><a href="https://wa.me/8185960347">Atendimento via Whatsapp</a></li>
+                <li><a href="/links_rodapé/atendimento_por_e-mail/index.html">Atendimento por E-mail</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="/carrinho/script.js"></script>
+    <footer class="direitos">
+        <p>&copy; 2024 KingsServant. Todos os direitos reservados.</p>
+    </footer> 
+    
+</body>
+</html>
